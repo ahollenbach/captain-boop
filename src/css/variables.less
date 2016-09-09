@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+
+// Core variables
+@dark-gray: #242628;
+@light-blue: #93b4c7;
+@medium-blue: #5b798c;
+@dark-blue: #3a4e5b;
+
+@off-white: #e5ecf0;
+@tan-gray: #777879;
+
+
+// Global
+@html-font-size: 10px;
+@html-line-height: 1.428571429;
+@body-bg: none;
+@body-font-color: #fff;
+@body-font-size: 1.4rem;
+@body-font-family: 'Lato', sans-serif;
+
+// Sizes
+@layout-gutter: 1rem;
+
+// Colors
+@core-color: @light-blue;
+@core-secondary-color: lighten(@core-color, 40%);
+@core-light-color: #fff;
+@core-meta-color: #888;
+@core-link-color: @light-blue;
+@core-border-color: #efefef;
+@core-empty-bg: #f8f8f8;
+@control-color: #c5c5c5;
+@control-color-success: #32b643;
+@control-color-info: #0193eb;
+@control-color-warning: #ffb700;
+@control-color-danger: #e85600;
+
+// Responsive breakpoints
+@size-xs: 480px;
+@size-sm: 600px;
+@size-md: 840px;
+@size-lg: 960px;
+@size-xl: 1280px;
+
+// Mixins
+.clearfix() {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+.toast-variant(@color) {
+  background: @color;
+  border-color: darken(@color, 2%);
+  color: @core-light-color;
+
+  a {
+    color: @core-light-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: .75;
+    }
+  }
+}
+.label-base() {
+  border-radius: .2rem;
+  display: inline;
+  font-size: 1em;
+  padding: .1em .3em;
+  vertical-align: baseline;
+}
+.label-variant(@color) {
+  background: @color;
+  color: @core-light-color;
+}

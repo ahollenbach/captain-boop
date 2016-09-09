@@ -1,0 +1,43 @@
+@import "elements.less";
+
+@import 'https://fonts.googleapis.com/css?family=Pathway+Gothic+One';
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+
+@dark-gray: #242628;
+@light-blue: #93b4c7;
+@medium-blue: #5b798c;
+@dark-blue: #3a4e5b;
+
+@off-white: #e5ecf0;
+@tan-gray: #777879;
+
+@good-green: #136F63;
+
+html {
+  height: 100%;
+  background: linear-gradient(0deg, @dark-blue 0%, @dark-gray 100%);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+h1.title {
+  font-size: 3.5em;
+}
+
+.form-switch input:checked+.form-icon {
+  background: @good-green !important;
+  border-color: @good-green !important;
+}
+
+#footer {
+  text-align: center;
+  padding: 2em;
+}
+
+.modal {
+  color: @dark-gray;
+}
