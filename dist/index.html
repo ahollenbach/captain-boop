@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="An audio soundboard to use when playing Captain Sonar.">
+
+	<meta name="viewport" content="width=device-width">
+
+	<title>Captain Boop</title>
+
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	<link href="css/spectre.css" rel="stylesheet"  />
+</head>
+<body>
+	<h1 class="title">Captain Boop</h1>
+
+	<div class="container">
+		<div class="columns">
+			<div class="column col-md-3">
+				<div id="settings">
+					<form class="form-horizontal sound-group">
+						<h3>Ambient</h3>
+						<div class="form-group">
+							<label class="form-switch">
+								<input type="checkbox" checked="checked" id="ambient-underwater" />
+								<i class="form-icon"></i> Underwater noise
+							</label>
+				    </div>
+						<div class="form-group">
+							<label class="form-switch">
+								<input type="checkbox" checked="checked" id="ambient-engine" />
+								<i class="form-icon"></i> Engine noise
+							</label>
+				    </div>
+						<div class="form-group">
+							<label class="form-switch">
+								<input type="checkbox" checked="checked" id="ambient-sonar" />
+								<i class="form-icon"></i> Sonar
+							</label>
+				    </div>
+					</form>
+					<form class="form-horizontal sound-group">
+						<h3>Listen Words</h3>
+						<div class="form-group">
+							<label class="form-switch">
+								<input type="checkbox" checked="checked" id="listen-action" data-kw='["stop","resume"]' />
+								<i class="form-icon"></i> Stop/Resume
+							</label>
+				    </div>
+						<div class="form-group">
+							<label class="form-switch">
+								<input type="checkbox" checked="checked" id="listen-damage" data-kw='["direct hit","indirect hit"]' />
+								<i class="form-icon"></i> Direct/Indirect Hit
+							</label>
+				    </div>
+					</form>
+					<form class="form-horizontal sound-group">
+						<h3>Events and Alarms</h3>
+						<div class="form-group">
+							<label class="form-switch">
+								<input type="checkbox" checked="checked" id="event-dive"/>
+								<i class="form-icon"></i> Dive horn
+							</label>
+				    </div>
+						<p>More coming soon!</p>
+					</form>
+				</div>
+			</div><!--settings-->
+
+			<div class="column col-md-9">
+				<button id="btn-start" class="btn btn-primary">Start game</button>
+				<button id="btn-stop" class="btn">Stop game</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer"><button class="btn btn-link" onclick="$('#credits').addClass('active')">Credits</button></div>
+
+	<div id="credits" class="modal">
+	    <div class="modal-overlay"></div>
+	    <div class="modal-container">
+	        <div class="modal-header">
+	            <button class="btn btn-clear float-right"></button>
+	            <div class="modal-title"><h3>Credits</h3></div>
+	        </div>
+	        <div class="modal-body">
+	            <div class="content">
+									<p>Author: Andrew Hollenbach (ahollenbach)</p>
+	                <p><a href="https://www.github.com/ahollenbach/captain-boop" target="_blank">Source code (Github)</a></p>
+									<p><a href="https://www.reddit.com/r/CaptainSonar" target="_blank">Captain Sonar Subreddit</a></p>
+									<p>Sounds from <a href="https://www.freesound.org" target="_blank">freesound.org</a></p>
+							</div>
+	        </div>
+	        <div class="modal-footer">
+	            <button class="btn btn-primary" onclick="$('#credits').removeClass('active')">Close</button>
+	        </div>
+	    </div>
+	</div>
+
+	<!-- All sound effects -->
+	<audio id="audio-ambient-underwater" loop="loop">
+   <source src="audio/83979__theredshore__submarine.mp3" />
+	</audio>
+	<audio id="audio-event-dive">
+   <source src="audio/203562__timbre__submarine-dive-horn-variants-2013.mp3" />
+	</audio>
+	<audio id="audio-reaction-damage">
+   <source src="audio/128520__typonnegatywny__heavy-drop-long.mp3" />
+	</audio>
+	<!-- https://www.freesound.org/search/?q=underwater&f=grouping_pack:%2215864_Underwater%22%20&s=%22score%20desc%22&g=1&advanced=0&a_tag=&a_filename=&a_description=&a_packname=&a_soundid=&a_username= -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+</html>
