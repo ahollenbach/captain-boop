@@ -5,6 +5,9 @@ Captain Boop is meant to provide companion audio to help set the mood for your g
 
 This is the product of a handful of hours of work and is far from complete.
 
+## Getting Started
+The easiest way is simply to navigate to https://ahollenbach.github.io/captain-boop/! This hosts a built version of the soundboard. If you're interested in making modifications (adding your own sounds, etc.), see below for installation information.
+
 ## Installation
 ```bash
 git clone https://github.com/ahollenbach/captain-boop.git
