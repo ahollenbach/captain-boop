@@ -1,5 +1,10 @@
 (function () {
 
+// Storing data here
+var boop = {
+  activeLoops: []
+};
+
 function stop() {
   alert("stop");
 }
@@ -32,6 +37,8 @@ function playSound(soundId) {
       }
       $(soundId)[0].play();
     }, waitTime);
+
+    boop.activeLoops.push(loop);
   } else {
     $(soundId)[0].play();
   }
@@ -83,7 +90,10 @@ function stopGame() {
 
   $("audio").each(function() {
     $(this)[0].pause();
-    // TODO detach setInterval
+    $(this)[0].currentTime = 0;
+    while(boop.activeLoops.length > 0) {
+      clearInterval(boop.activeLoops.pop());
+    }
   });
 
 
