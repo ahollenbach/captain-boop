@@ -10,9 +10,6 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      options: {
-        banner: '/* <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
       build: {
         files: {
           'dist/js/main.min.js': 'src/**/*.js'
@@ -60,6 +57,10 @@ module.exports = function(grunt) {
       scripts: {
         files: 'src/**/*.js',
         tasks: ['jshint', 'uglify']
+      },
+      images: {
+        files: ["src/**/*.{png,jpg,gif}"],
+        tasks: ['imagemin']
       }
     },
 
@@ -95,11 +96,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
-  // grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   grunt.registerTask('default', ['jshint', 'uglify', 'less:prod', 'imagemin', 'copy']);
-  grunt.registerTask('dev', ['jshint', 'uglify', 'less:dev', 'copy']);
-  grunt.registerTask('prod', ['jshint', 'uglify', 'less:prod', 'imagemin', 'copy']);
 };
