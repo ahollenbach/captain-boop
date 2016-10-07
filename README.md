@@ -23,8 +23,6 @@ Open `dist/index.html` in your web browser!
 - [ ] Find and add audio for all ambient and listen word sounds
 - [ ] Properly react on all audio cues
 - [ ] Add damage alarms
-- [ ] Completely reset audio when stopping?
-- [ ] Fix all todos 😜
 
 ### v2
 - [ ] Make listen words configurable (including language?) in config file
